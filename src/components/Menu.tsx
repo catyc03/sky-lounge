@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const menuItems = [
   { name: "Afrika Queen", category: "premium", price: "10 KM" },
@@ -95,14 +96,12 @@ const Menu = () => {
           <p className="text-foreground/70 mb-6 font-inter">
             Svi naši premium okusi su dostupni i sa ice opcijom za dodatnu osvježavnost
           </p>
-          <a
-            href="https://www.instagram.com/skyloungesl"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/menu"
             className="btn-primary inline-block"
           >
             Pogledaj cijeli meni
-          </a>
+          </Link>
         </div>
       </div>
     </section>

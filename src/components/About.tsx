@@ -37,7 +37,7 @@ const About = () => {
               </div>
               <div className="feature-card">
                 <Star className="text-primary mx-auto mb-2" size={32} />
-                <p className="text-3xl font-playfair font-bold text-primary mb-1">★★★★★</p>
+                <p className="text-2xl md:text-3xl font-playfair font-bold text-primary mb-1">★★★★★</p>
                 <p className="text-sm text-muted-foreground">Experience</p>
               </div>
             </div>

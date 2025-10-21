@@ -1,4 +1,4 @@
-import { Instagram, Facebook } from "lucide-react";
+import { Instagram } from "lucide-react";
 import logo from "@/assets/slylogo.jpg";
 
 const Footer = () => {
@@ -55,14 +55,6 @@ const Footer = () => {
                 className="social-icon"
               >
                 <Instagram size={24} />
-              </a>
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-              >
-                <Facebook size={24} />
               </a>
             </div>
           </div>

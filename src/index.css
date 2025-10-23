@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 240 20% 8%;
+    --foreground: 40 10% 96%;
+
+    --card: 240 18% 12%;
+    --card-foreground: 40 10% 96%;
+
+    --popover: 240 18% 12%;
+    --popover-foreground: 40 10% 96%;
+
+    --primary: 45 100% 51%;
+    --primary-foreground: 240 20% 8%;
+
+    --secondary: 270 80% 60%;
+    --secondary-foreground: 40 10% 96%;
+
+    --muted: 240 15% 20%;
+    --muted-foreground: 40 5% 65%;
+
+    --accent: 270 80% 60%;
+    --accent-foreground: 40 10% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 10% 96%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 15%;
+    --ring: 45 100% 51%;
+
+    --radius: 0.75rem;
+
+    --gold-glow: 45 100% 51%;
+    --purple-glow: 270 80% 60%;
+    
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 51%) 0%, hsl(35 100% 45%) 100%);
+    --gradient-purple: linear-gradient(135deg, hsl(270 80% 60%) 0%, hsl(280 70% 50%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsl(240 20% 8% / 0.4) 0%, hsl(240 20% 8% / 0.9) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-foreground/80 hover:text-primary transition-colors duration-300 font-inter font-medium;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:scale-105 font-inter;
+  }
+
+  .feature-card {
+    @apply bg-muted/30 border border-border rounded-lg p-6 text-center transition-all duration-300 hover:bg-muted/50 hover:border-primary/50;
+  }
+
+  .menu-card {
+    @apply bg-card border border-border rounded-lg p-6 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20 animate-fade-in-up;
+  }
+
+  .category-btn {
+    @apply px-6 py-2 rounded-lg font-inter font-medium transition-all duration-300 bg-muted text-foreground hover:bg-primary hover:text-primary-foreground;
+  }
+
+  .category-btn.active {
+    @apply bg-primary text-primary-foreground shadow-lg shadow-primary/30;
+  }
+
+  .gallery-item {
+    @apply relative animate-fade-in-up cursor-pointer;
+  }
+
+  .booking-form {
+    @apply bg-card border border-border rounded-lg p-8 shadow-2xl;
+  }
+
+  .form-label {
+    @apply block text-foreground font-inter font-medium mb-2;
+  }
+
+  .form-input {
+    @apply w-full bg-input border border-border rounded-lg px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all font-inter;
+  }
+
+  .contact-card {
+    @apply bg-muted/30 border border-border rounded-lg p-6 transition-all duration-300 hover:bg-muted/50 hover:border-primary/50;
+  }
+
+  .social-icon {
+    @apply bg-primary/20 text-primary p-3 rounded-lg transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/30;
+  }
+}

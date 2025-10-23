@@ -34,7 +34,7 @@ const About = () => {
                 <p className="text-sm text-muted-foreground">Kvalitet</p>
               </div>
               <div className="feature-card">
-                <Sparkles className="text-primary mx-auto mb-2" size={32} />
+                <span className="text-4xl mx-auto mb-2">💎</span>
                 <p className="text-2xl md:text-3xl font-playfair font-bold text-primary mb-1">VIP</p>
                 <p className="text-sm text-muted-foreground">Experience</p>
               </div>

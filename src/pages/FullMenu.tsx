@@ -2,39 +2,86 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
-const allMenuItems = [
-  { name: "Afrika Queen", category: "premium", price: "10 KM" },
-  { name: "Black Nana", category: "premium", price: "10 KM" },
-  { name: "Grape Mint", category: "classic", price: "10 KM" },
-  { name: "Peach", category: "classic", price: "10 KM" },
-  { name: "Moskva / Lubenica", category: "classic", price: "10 KM" },
-  { name: "Swiss Bonbon", category: "classic", price: "10 KM" },
-  { name: "Menta", category: "classic", price: "10 KM" },
-  { name: "Cola", category: "classic", price: "10 KM" },
-  { name: "Blue Ice", category: "classic", price: "10 KM" },
-  { name: "Limun", category: "classic", price: "10 KM" },
-  { name: "Ananas", category: "classic", price: "10 KM" },
-  { name: "Love 66", category: "classic", price: "10 KM" },
-  { name: "Joker", category: "classic", price: "10 KM" },
-  { name: "Double Melon", category: "classic", price: "10 KM" },
-  { name: "Keks", category: "classic", price: "10 KM" },
-  { name: "Limeta", category: "classic", price: "10 KM" },
-  { name: "Cherry", category: "classic", price: "10 KM" },
-  { name: "Jagoda", category: "classic", price: "10 KM" },
-];
-
+const allMenuItems = [{
+  name: "Afrika Queen",
+  category: "premium",
+  price: "10 KM"
+}, {
+  name: "Black Nana",
+  category: "premium",
+  price: "10 KM"
+}, {
+  name: "Grape Mint",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Peach",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Moskva / Lubenica",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Swiss Bonbon",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Menta",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Cola",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Blue Ice",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Limun",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Ananas",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Love 66",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Joker",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Double Melon",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Keks",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Limeta",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Cherry",
+  category: "classic",
+  price: "10 KM"
+}, {
+  name: "Jagoda",
+  category: "classic",
+  price: "10 KM"
+}];
 const FullMenu = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <section className="py-32 bg-background">
         <div className="container mx-auto px-4">
-          <Link 
-            to="/"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 font-inter"
-          >
+          <Link to="/" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 font-inter">
             <ArrowLeft size={20} />
             Nazad na početnu
           </Link>
@@ -54,14 +101,9 @@ const FullMenu = () => {
               Premium Okusi
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {allMenuItems
-                .filter((item) => item.category === "premium")
-                .map((item, index) => (
-                  <div
-                    key={index}
-                    className="menu-card group"
-                    style={{ animationDelay: `${index * 0.05}s` }}
-                  >
+              {allMenuItems.filter(item => item.category === "premium").map((item, index) => <div key={index} className="menu-card group" style={{
+              animationDelay: `${index * 0.05}s`
+            }}>
                     <div className="flex justify-between items-start">
                       <div>
                         <h3 className="text-xl font-playfair font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
@@ -75,8 +117,7 @@ const FullMenu = () => {
                         {item.price}
                       </p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
             </div>
           </div>
 
@@ -86,14 +127,9 @@ const FullMenu = () => {
               Classic Okusi
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {allMenuItems
-                .filter((item) => item.category === "classic")
-                .map((item, index) => (
-                  <div
-                    key={index}
-                    className="menu-card group"
-                    style={{ animationDelay: `${index * 0.05}s` }}
-                  >
+              {allMenuItems.filter(item => item.category === "classic").map((item, index) => <div key={index} className="menu-card group" style={{
+              animationDelay: `${index * 0.05}s`
+            }}>
                     <div className="flex justify-between items-start">
                       <div>
                         <h3 className="text-xl font-playfair font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
@@ -107,25 +143,15 @@ const FullMenu = () => {
                         {item.price}
                       </p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
             </div>
           </div>
 
-          <div className="text-center bg-card rounded-lg p-8 max-w-3xl mx-auto">
-            <p className="text-lg text-foreground/80 mb-4 font-inter">
-              Svi naši premium okusi su dostupni i sa ice opcijom za dodatnu osvježavnost
-            </p>
-            <p className="text-foreground/70 font-inter">
-              Za rezervacije i dodatne informacije posjetite nas na Instagramu
-            </p>
-          </div>
+          
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default FullMenu;

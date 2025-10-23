@@ -13,6 +13,8 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: undefined,
+        format: "es",
+        inlineDynamicImports: true,
       },
     },
   },

@@ -13,10 +13,14 @@ const Booking = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Redirect to Instagram DM
-    toast.info("Preusmjeravanje na Instagram za rezervaciju...");
+    // Create WhatsApp message with form data
+    const message = `Rezervacija za SkyLounge:%0A%0AIme: ${encodeURIComponent(formData.name)}%0ABroj osoba: ${formData.guests}%0ADatum: ${formData.date}%0AVrijeme: ${formData.time}${formData.notes ? `%0APosebne želje: ${encodeURIComponent(formData.notes)}` : ''}`;
+    
+    const whatsappUrl = `https://wa.me/387061643113?text=${message}`;
+    
+    toast.info("Preusmjeravanje na WhatsApp za rezervaciju...");
     setTimeout(() => {
-      window.open("https://www.instagram.com/skyloungesl", "_blank");
+      window.open(whatsappUrl, "_blank");
     }, 1000);
   };
 
@@ -129,7 +133,7 @@ const Booking = () => {
             </button>
 
             <p className="text-center text-sm text-muted-foreground font-inter">
-              Klikom na dugme bićete preusmjereni na Instagram za brzu rezervaciju
+              Klikom na dugme bićete preusmjereni na WhatsApp za brzu rezervaciju
             </p>
           </div>
         </form>

@@ -21,6 +21,7 @@ const allMenuItems = [
   { name: "Keks", category: "classic", price: "10 KM" },
   { name: "Limeta", category: "classic", price: "10 KM" },
   { name: "Cherry", category: "classic", price: "10 KM" },
+  { name: "Jagoda", category: "classic", price: "10 KM" },
 ];
 
 const FullMenu = () => {

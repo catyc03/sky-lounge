@@ -52,12 +52,6 @@ const Navigation = () => {
             <button onClick={() => scrollToSection("contact")} className="nav-link">
               Contact
             </button>
-            <button
-              onClick={() => scrollToSection("booking")}
-              className="btn-primary"
-            >
-              Rezerviši
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,12 +80,6 @@ const Navigation = () => {
             </button>
             <button onClick={() => scrollToSection("contact")} className="block w-full text-left nav-link">
               Contact
-            </button>
-            <button
-              onClick={() => scrollToSection("booking")}
-              className="btn-primary w-full"
-            >
-              Rezerviši
             </button>
           </div>
         )}

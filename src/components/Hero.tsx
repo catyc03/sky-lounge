@@ -2,8 +2,8 @@ import heroImage from "@/assets/sky.jpg";
 import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
-  const scrollToBooking = () => {
-    const element = document.getElementById("booking");
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -30,10 +30,10 @@ const Hero = () => {
           SkyLounge – mjesto gdje svaki trenutak postaje poseban
         </p>
         <button
-          onClick={scrollToBooking}
+          onClick={scrollToContact}
           className="btn-primary text-lg px-8 py-4"
         >
-          Rezerviši svoj sto
+          Kontaktirajte nas
         </button>
       </div>
 
